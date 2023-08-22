@@ -1,1 +1,1 @@
-# flutter_training_challenge_HCRL
+# Flutter Training Challenge
