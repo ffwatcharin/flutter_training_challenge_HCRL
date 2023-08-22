@@ -38,19 +38,48 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('QuizApp (Flutter)'),
+        title: const Text(
+          'Quiz App',
+          style: TextStyle(
+            fontFamily: 'Prompt',
+            fontSize: 24,
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.purple, //AppBar Color
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.quiz_rounded,
+              size: 27,
+            ),
+          ),
+        ],
       ),
+      backgroundColor: const Color.fromARGB(255, 255, 233, 241), //bg color
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           LinearProgressIndicator(
             value: (currentQuestionIndex + 1) / totalQuestion,
+            backgroundColor:
+                const Color.fromARGB(255, 255, 255, 255), //color Progress
+            valueColor: const AlwaysStoppedAnimation<Color>(
+              Color.fromARGB(57, 129, 0, 78),
+            ),
+            minHeight: 15,
           ),
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(13),
             child: Text(
-              'Question ${currentQuestionIndex + 1} of ${totalQuestion}',
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              'Question ${currentQuestionIndex + 1} of $totalQuestion',
+              style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Prompt',
+                  color: Colors.black),
             ),
           ),
           SizedBox(
@@ -65,8 +94,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                     currentQuestion.text,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'Prompt',
                     ),
                   ),
                   const SizedBox(

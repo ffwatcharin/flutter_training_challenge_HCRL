@@ -15,7 +15,7 @@ class AnswerButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromARGB(255, 59, 4, 61),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
