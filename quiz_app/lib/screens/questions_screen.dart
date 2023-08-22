@@ -16,7 +16,7 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   int currentQuestionIndex = 0;
-  int totalScore = 0; 
+  int totalScore = 0;
 
   //shuffledAnswer
   List<String> get shuffledAnswer {
@@ -74,11 +74,14 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   ),
                   ...shuffledAnswer.map(
                     (answer) {
-                      return AnswerButton(
-                        answerText: answer,
-                        onTap: () {
-                          answerQustion(answer);
-                        },
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: AnswerButton(
+                          answerText: answer,
+                          onTap: () {
+                            answerQustion(answer);
+                          },
+                        ),
                       );
                     },
                   ),
