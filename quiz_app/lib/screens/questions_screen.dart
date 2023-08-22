@@ -16,6 +16,7 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   int currentQuestionIndex = 0;
+  int totalScore = 0; 
 
   //shuffledAnswer
   List<String> get shuffledAnswer {
