@@ -9,12 +9,11 @@ class QuestionSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400,
+      height: 350,
       child: SingleChildScrollView(
         child: Column(
           children: summaryData.map((data) {
             return SummaryItem(data);
-            
           }).toList(),
         ),
       ),
