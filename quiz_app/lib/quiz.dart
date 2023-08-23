@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/question.dart';
+import 'package:quiz_app/screens/createquiz_screen.dart';
 import 'package:quiz_app/screens/start_screen.dart';
 import 'screens/questions_screen.dart';
 import 'screens/reslt_screen.dart';
@@ -21,6 +22,12 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void _goToCreateQuizScreen() {
+    setState(() {
+      _activeScreen = 'createquiz-screen';
+    });
+  }
+
   void _chooseAnswer(String answer) {
     _selectedAnswer.add(answer);
 
@@ -33,12 +40,14 @@ class _QuizState extends State<Quiz> {
 
   void restartQuiz() {
     setState(() {
+      _selectedAnswer.clear();
       _activeScreen = 'questions-screen';
     });
   }
 
   void resetToHome() {
     setState(() {
+      _selectedAnswer.clear();
       _activeScreen = 'start-screen';
     });
   }
@@ -59,6 +68,10 @@ class _QuizState extends State<Quiz> {
         onRestart: restartQuiz,
         onHome: resetToHome,
       );
+    }
+
+    if (_activeScreen == 'createquiz-screen') {
+      screenWidget = CreateQuizScreen();
     }
 
     return MaterialApp(

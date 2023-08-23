@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/createquiz_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
 
   final void Function() startQuiz;
-  // final void Function() createQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,15 @@ class StartScreen extends StatelessWidget {
               ),
             ),
             TextButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const CreateQuizScreen(), //start create quiz screen
+                    ),
+                  );
+                },
                 icon: const Icon(
                   Icons.add,
                   color: Colors.purple,

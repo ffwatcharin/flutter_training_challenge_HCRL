@@ -66,11 +66,12 @@ class ResultScreen extends StatelessWidget {
                   ),
                   TextButton.icon(
                     onPressed: onRestart,
-                    icon: const Icon(Icons.restart_alt, color: Colors.purple),
+                    icon: const Icon(Icons.restart_alt,
+                        color: Color.fromARGB(255, 51, 25, 56)),
                     label: const Text(
                       'Restart Quiz!',
                       style: TextStyle(
-                          color: Colors.purple,
+                          color: Color.fromARGB(255, 51, 25, 56),
                           fontSize: 18,
                           fontFamily: 'Prompt',
                           fontWeight: FontWeight.bold),
@@ -80,7 +81,7 @@ class ResultScreen extends StatelessWidget {
                       onPressed: onHome,
                       icon: const Icon(
                         Icons.home,
-                        color: Colors.purple,
+                        color: Color.fromARGB(255, 51, 25, 56),
                       ),
                       label: const Text(
                         'Home',
@@ -88,7 +89,7 @@ class ResultScreen extends StatelessWidget {
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Prompt',
-                            color: Colors.purple),
+                            color: Color.fromARGB(255, 51, 25, 56)),
                       )),
                 ],
               ),
