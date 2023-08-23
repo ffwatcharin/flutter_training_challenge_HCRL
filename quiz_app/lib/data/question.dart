@@ -23,27 +23,27 @@ const questions = [
     'What is Container?',
     [
       'Convenience widget that combines common painting, positioning, and sizing of widgets',
-      'Choice2 2',
-      'Choice2 3',
-      'Choice2 4',
+      'I don\'t know.',
+      'I don\'t know.',
+      'I don\'t know.',
     ],
   ),
   QuizQuestion(
     'What is StatelessWidget?',
     [
       'A stateless widget never changes. Icon, IconButton, and Text are examples of stateless widgets.',
-      'Choice2 2',
-      'Choice2 3',
-      'Choice2 4',
+      'I don\'t know.',
+      'I don\'t know.',
+      'I don\'t know.',
     ],
   ),
   QuizQuestion(
     'What is StatefulWidget',
     [
       'if a widget can change—when a user interacts with it, for example',
-      'Choice2 2',
-      'Choice2 3',
-      'Choice2 4',
+      'I don\'t know.',
+      'I don\'t know.',
+      'I don\'t know.',
     ],
   ),
 ];

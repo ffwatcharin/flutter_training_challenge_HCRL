@@ -51,12 +51,20 @@ class StartScreen extends StatelessWidget {
                 ),
               ),
             ),
-            //   // OutlinedButton.icon(
-            //   //   onPressed: () {},
-            //   //   icon: const Icon(Icons.add),
-            //   //   label: const Text('Create Quiz'),
-            //   ),
-            // ],
+            TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.add,
+                  color: Colors.purple,
+                ),
+                label: const Text(
+                  'Create Quiz',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Prompt',
+                    color: Colors.purple,
+                  ),
+                ))
           ],
         ),
       ),

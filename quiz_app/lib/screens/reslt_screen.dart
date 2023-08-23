@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../data/question.dart';
 import '../widgets/questions_summary/questions_summary.dart';
@@ -40,7 +41,7 @@ class ResultScreen extends StatelessWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 255, 185, 209),
+        color: Color.fromARGB(255, 255, 233, 241),
       ),
       child: Center(
         child: Column(

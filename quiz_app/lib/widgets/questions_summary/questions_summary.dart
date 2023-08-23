@@ -9,11 +9,16 @@ class QuestionSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 350,
+      height: 380,
       child: SingleChildScrollView(
         child: Column(
-          children: summaryData.map((data) {
-            return SummaryItem(data);
+          children: summaryData.asMap().entries.map((entry) {
+            final int questionIndex = entry.key + 1;
+            final Map<String, Object> data = entry.value;
+            final bool isCorrectAnswer =
+                data['user_answer'] == data['correct_answer'];
+            return SummaryItem(data,
+                questionIndex: questionIndex, isCorrectAnswer: isCorrectAnswer);
           }).toList(),
         ),
       ),
