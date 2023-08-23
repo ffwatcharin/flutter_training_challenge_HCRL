@@ -10,7 +10,7 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 225, 207, 240),
+        color: Color.fromARGB(255, 255, 233, 241),
       ),
       child: Center(
         child: Column(

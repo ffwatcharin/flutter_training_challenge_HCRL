@@ -63,7 +63,7 @@ class SummaryItem extends StatelessWidget {
                   fontSize: 14,
                   fontFamily: 'Prompt',
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  color: Color.fromARGB(255, 43, 119, 46),
                 ),
               ),
               RichText(
