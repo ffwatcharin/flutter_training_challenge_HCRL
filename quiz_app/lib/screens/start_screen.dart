@@ -45,34 +45,43 @@ class StartScreen extends StatelessWidget {
               label: const Text(
                 'Start Quiz',
                 style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.purple,
-                  fontFamily: 'Prompt',
-                ),
+                    fontSize: 20,
+                    color: Colors.purple,
+                    fontFamily: 'Prompt',
+                    fontWeight: FontWeight.bold),
               ),
             ),
             TextButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          const CreateQuizScreen(), //start create quiz screen
-                    ),
-                  );
-                },
-                icon: const Icon(
-                  Icons.add,
-                  color: Colors.purple,
-                ),
-                label: const Text(
-                  'Create Quiz',
-                  style: TextStyle(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        CreateQuizScreen(), //start create quiz screen
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.add,
+                color: Colors.purple,
+              ),
+              label: const Text(
+                'Create Quiz',
+                style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'Prompt',
                     color: Colors.purple,
-                  ),
-                ))
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            const Text(
+              'ผมทำไม่ทันแล้ววววววว...',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.red,
+                  fontFamily: 'Prompt',
+                  fontWeight: FontWeight.bold),
+            ),
           ],
         ),
       ),
